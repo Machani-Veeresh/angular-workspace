@@ -6,7 +6,7 @@ import { ChildComponent } from '../child/child.component';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit {
-
+  showText = false;
   constructor() { }
   @ViewChild(ChildComponent) child: { viewChildMessage: any; } | undefined;
   ngOnInit(): void {
@@ -17,5 +17,9 @@ export class ParentComponent implements OnInit {
   }
   recieveMessage(message: string) {
     alert(message);
+  }
+  templateFunc(event: any): void {
+    this.showText = !this.showText
+    console.log(event);
   }
 }
