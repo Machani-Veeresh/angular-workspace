@@ -9,6 +9,7 @@ export class ChildComponent implements OnInit {
   @Input() childMessage: string | undefined;
   @Output() messageEvent = new EventEmitter<string>();
   viewChildMessage = "viewChildMessage";
+  imageUrl = 'assets/imageEx.jpeg'
   constructor() { }
   todaysDate = new Date();
 
