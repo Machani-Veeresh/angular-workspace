@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit,OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'app-hello-world',
@@ -9,6 +9,17 @@ import { Component } from '@angular/core';
    }
    `]
 })
-export class HelloWorldComponent {
+export class HelloWorldComponent implements OnInit, OnDestroy{
+    interValSlab: string | number | NodeJS.Timer | undefined;
+    ngOnInit(): void {
+        this.interValSlab = setInterval(()=>{
+            console.log('Hello from NgOnit')
+        },1000)
+    }
+    ngOnDestroy(): void {
+        if(this.interValSlab){
+            clearInterval(this.interValSlab);
+        }
+    }
     title = 'Hello World'
 }
