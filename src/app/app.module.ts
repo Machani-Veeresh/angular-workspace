@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { GreetingsPipe } from './greetings.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    GreetingsPipe
   ],
   imports: [
     BrowserModule,
