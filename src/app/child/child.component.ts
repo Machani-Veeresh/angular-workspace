@@ -13,9 +13,14 @@ export class ChildComponent implements OnInit {
   constructor() { }
   todaysDate = new Date();
 
+  onSale = true;
+  styleWidth = '50%';
   ngOnInit(): void {
   }
   sendMessage() {
     this.messageEvent.emit('hello from child');
+  }
+  onSave(){
+    console.log('Save button clicked'); 
   }
 }

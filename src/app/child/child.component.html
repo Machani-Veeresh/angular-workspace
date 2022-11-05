@@ -6,5 +6,21 @@
 <div>{{todaysDate | date : 'dd mm yy' }}</div>
 
 <div>{{'World' | greetings}} </div>
-<img src="{{imageUrl}}">
-<img [src]="imageUrl">
+<img [style.width]='styleWidth' [style.height]='styleWidth' src="{{imageUrl}}">
+<!-- <img [style.width]='styleWidth' [style.height]='styleWidth' [src]="imageUrl"> -->
+
+<div [class.sale]="onSale"></div>
+<div [class]="'classOne classTwo'">Both Classes in string</div>
+<div [class]="{
+    classOne: true,
+    classTwo: false
+}">Both Classes in Object Format</div>
+<div [class]="['classOn', 'classTwo']">Both Classes in array</div>
+
+<div [style.backgroundColor]="'green'" [style.width]='styleWidth'> single style application</div>
+<div [style.backgroundColor]="'red'"> single style camcelcase</div>
+<div [style]="{
+    backgroundolor: 'red',
+    color: 'green'
+}">Object applied style format</div>
+<button (click)="onSave()">Save</button>
