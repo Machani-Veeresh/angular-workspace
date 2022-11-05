@@ -7,6 +7,7 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ParentComponent implements OnInit {
   showText = false;
+  eventName = "customEvent";
   constructor() { }
   @ViewChild(ChildComponent) child: { viewChildMessage: any; } | undefined;
   ngOnInit(): void {
@@ -21,5 +22,8 @@ export class ParentComponent implements OnInit {
   templateFunc(event: any): void {
     this.showText = !this.showText
     console.log(event);
+  }
+  customEventTrigger(eventName: string) {
+    console.log(eventName);
   }
 }

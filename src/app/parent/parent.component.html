@@ -1,4 +1,4 @@
-<app-child [childMessage]="'FromParent'" (messageEvent)="recieveMessage($event)">
+<app-child [childMessage]="'FromParent'" (messageEvent)="recieveMessage($event)" (customEventEmitter)="customEventTrigger($event)">
 
 <p selector>Slot ng Content with out a selector </p></app-child>
 <button (click)="templateFunc($event)">Toggle Text</button>

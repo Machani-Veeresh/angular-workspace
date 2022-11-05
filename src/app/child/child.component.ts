@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit {
   @Input() childMessage: string | undefined;
   @Output() messageEvent = new EventEmitter<string>();
+  @Output() customEventEmitter = new EventEmitter<string>();
   viewChildMessage = "viewChildMessage";
   imageUrl = 'assets/imageEx.jpeg'
   constructor() { }
@@ -22,5 +23,8 @@ export class ChildComponent implements OnInit {
   }
   onSave(){
     console.log('Save button clicked'); 
+  }
+  customEvent(){
+    this.customEventEmitter.emit('customEventEmitter')
   }
 }
