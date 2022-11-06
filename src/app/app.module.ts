@@ -7,19 +7,34 @@ import { HelloWorldComponent } from './hello-world.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { GreetingsPipe } from './greetings.pipe';
+import { SizerComponent } from './sizer/sizer.component';
+import { DirectiveDirective } from './directive.directive';
+import { LogService } from './log.service';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { ChildAComponent } from './child-a/child-a.component';
+import { ChildBComponent } from './child-b/child-b.component';
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
     ParentComponent,
     ChildComponent,
-    GreetingsPipe
+    GreetingsPipe,
+    SizerComponent,
+    DirectiveDirective,
+    FirstComponent,
+    SecondComponent,
+    ChildAComponent,
+    ChildBComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LogService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

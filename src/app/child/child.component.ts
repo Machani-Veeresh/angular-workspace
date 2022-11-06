@@ -27,4 +27,10 @@ export class ChildComponent implements OnInit {
   customEvent(){
     this.customEventEmitter.emit('customEventEmitter')
   }
+  dec(){
+
+  }
+  inc(){
+
+  }
 }

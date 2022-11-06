@@ -8,6 +8,11 @@ import { ChildComponent } from '../child/child.component';
 export class ParentComponent implements OnInit {
   showText = false;
   eventName = "customEvent";
+  lists = [
+    { name: '1' },
+    { name: '1' },
+    { name: '1' }
+  ]
   constructor() { }
   @ViewChild(ChildComponent) child: { viewChildMessage: any; } | undefined;
   ngOnInit(): void {
