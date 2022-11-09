@@ -14,6 +14,8 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ChildAComponent } from './child-a/child-a.component';
 import { ChildBComponent } from './child-b/child-b.component';
+import { CustomerComponent } from './customer/customer.component';
+import { OwnerComponent } from './owner/owner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { ChildBComponent } from './child-b/child-b.component';
     FirstComponent,
     SecondComponent,
     ChildAComponent,
-    ChildBComponent
+    ChildBComponent,
+    CustomerComponent,
+    OwnerComponent
   ],
   imports: [
     BrowserModule,

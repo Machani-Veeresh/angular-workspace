@@ -1,7 +1,7 @@
 <p>{{childMessage}}</p>
 <button (click)="sendMessage()">From Child Component</button>
 <ng-content [selector]></ng-content>
-
+<button (click)="triggerEvent()">send data to parent</button>
 <div>{{todaysDate | date}}</div>
 <div>{{todaysDate | date : 'dd mm yy' }}</div>
 

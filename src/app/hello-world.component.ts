@@ -5,6 +5,7 @@ import { Component,OnInit,OnDestroy } from '@angular/core';
     template: `
     // Text Interpolation Example 
     <h1> 1.  {{title}}</h1>
+    <button (click)="changeTitle()">changeTitle</button>
     // Expressions Example
     <div>2. {{number + number }}</div>
     <div>{{getMaximum(2,4)}}</div>`,
@@ -30,6 +31,9 @@ export class HelloWorldComponent implements OnInit, OnDestroy{
         }else {
             return b;
         }
+    }
+    changeTitle(): void {
+        this.title ="changeTitle"
     }
     ngOnDestroy(): void {
         if(this.interValSlab){

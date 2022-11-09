@@ -19,7 +19,11 @@ export class ParentComponent implements OnInit {
   }
   ngAfterViewInit() {
     console.log(this.child?.viewChildMessage);
-    // alert(this.child?.viewChildMessage);
+     alert(this.child?.viewChildMessage);
+  }
+  recieveDatafromChild(message:string){
+    alert(message);
+    console.log(message)
   }
   recieveMessage(message: string) {
     alert(message);

@@ -1,5 +1,5 @@
 <app-child [childMessage]="'FromParent'" (messageEvent)="recieveMessage($event)"
-    (customEventEmitter)="customEventTrigger($event)">
+    (customEventEmitter)="customEventTrigger($event)" (passEventtoParent)="recieveDatafromChild($event)">
 
     <p selector>Slot ng Content with out a selector </p>
 </app-child>

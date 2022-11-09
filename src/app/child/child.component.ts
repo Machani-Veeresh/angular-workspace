@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit {
   @Input() childMessage: string | undefined;
   @Output() messageEvent = new EventEmitter<string>();
+  @Output() passEventtoParent = new EventEmitter<string>();
   @Output() customEventEmitter = new EventEmitter<string>();
   viewChildMessage = "viewChildMessage";
   imageUrl = 'assets/imageEx.jpeg'
@@ -17,6 +18,10 @@ export class ChildComponent implements OnInit {
   onSale = true;
   styleWidth = '50%';
   ngOnInit(): void {
+  }
+  triggerEvent(){
+    console.log('event')
+    this.passEventtoParent.emit('send data to parent');
   }
   sendMessage() {
     this.messageEvent.emit('hello from child');

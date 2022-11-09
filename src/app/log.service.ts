@@ -7,4 +7,4 @@ export class LogService {
     logService(msg: string): void {
         console.log(msg);
     }
-}
+}   
